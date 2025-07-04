@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Adopción | Balsiam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Encabezado fijo con menú principal -->
+    <header class="sticky-header">
+      <img src="logopagina.png" alt="Logo Balsiam" class="logo-grande" />
+      <nav>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#ayuda">Cómo ayudar</a>
+        <a href="index.html#testimonios">Testimonios</a>
+        <a href="contacto-donaciones.html">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Sección principal del formulario de adopción -->
+    <section class="info formulario" style="margin-top: 150px">
+      <h2>Formulario de Adopción</h2>
+      <p>
+        Completa los siguientes datos para iniciar el proceso de adopción. Tu
+        interés es muy valioso y nos ayuda a encontrar un hogar responsable y
+        lleno de amor para cada mascota.
+      </p>
+
+      <!-- Formulario con campos requeridos -->
+      <form id="formAdopcion" class="formulario-adopcion">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+
+        <label for="direccion">Dirección (distrito, ciudad):</label>
+        <input type="text" id="direccion" name="direccion" required />
+
+        <label for="motivo">¿Por qué deseas adoptar?</label>
+        <textarea id="motivo" name="motivo" rows="3" required></textarea>
+
+        <label for="tiempo">¿Tienes tiempo para cuidar?</label>
+        <select id="tiempo" name="tiempo" required>
+          <option value="">Seleccione una opción</option>
+          <option value="si">Sí, tengo tiempo y compromiso</option>
+          <option value="no">No estoy seguro aún</option>
+        </select>
+
+        <label for="archivo">¿Puedes enviarnos fotos de tu espacio?</label>
+        <input type="file" id="archivo" name="archivo" accept="image/*" />
+
+        <!-- Botones -->
+        <div class="botones-form">
+          <a href="adopciones.html" class="boton-extra">
+            ← Volver a animales en adopción
+          </a>
+          <button type="submit" class="boton-donar">Enviar</button>
+          <a href="index.html" class="boton-extra">Cancelar</a>
+        </div>
+      </form>
+    </section>
+
+    <!-- Modal tipo login para confirmar adopción -->
+    <div id="modalLogin" class="modal">
+      <div class="modal-contenido">
+        <h3>Verificación de identidad</h3>
+        <label for="usuarioLogin">Usuario:</label>
+        <input type="text" id="usuarioLogin" required />
+
+        <label for="passwordLogin">Contraseña:</label>
+        <input type="password" id="passwordLogin" required />
+
+        <div class="botones-form">
+          <button id="btnConfirmarLogin" class="boton-donar">Confirmar</button>
+          <button id="btnCancelarLogin" class="boton-extra">Cancelar</button>
+        </div>
+        <p id="mensajeLogin" style="color: red; margin-top: 1rem"></p>
+      </div>
+    </div>
+
+    <!-- Pie de página con info legal y redes -->
+    <footer>
+      <p><strong>Logo Balsiam</strong></p>
+      <p>&copy; 2025 Balsiam Ayuda Animal</p>
+      <p>
+        <strong>Legal</strong><br />Política de Privacidad · Términos y
+        Condiciones · Protección de Datos
+      </p>
+      <div class="social-icons">
+        <img src="facebook.png" alt="Facebook" />
+        <img src="instagram.png" alt="Instagram" />
+        <img src="linkedin.png" alt="LinkedIn" />
+      </div>
+    </footer>
+
+    <!-- JavaScript externo para validaciones y lógica -->
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto y Donaciones | Balsiam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Encabezado fijo con navegación -->
+    <header class="sticky-header">
+      <img src="logopagina.png" alt="Logo Balsiam" class="logo-grande" />
+      <nav>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#ayuda">Cómo ayudar</a>
+        <a href="index.html#testimonios">Testimonios</a>
+        <a href="contacto-donaciones.html">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Sección de contacto -->
+    <section class="info contacto" style="margin-top: 150px">
+      <h2>Contacto y donaciones</h2>
+      <p>
+        Gracias por tu interés en ayudar. Puedes contactarnos o hacer una
+        donación para seguir rescatando y cuidando animales. ¡Cada aporte
+        cuenta!
+      </p>
+
+      <!-- Datos de contacto -->
+      <div class="contacto-datos">
+        <p><strong>WhatsApp:</strong> <span class="dato">987 654 321</span></p>
+        <p>
+          <strong>Correo electrónico:</strong>
+          <span class="dato">balsiam.ayuda@gmail.com</span>
+        </p>
+        <p>
+          <strong>Instagram:</strong> <span class="dato">@balsiam.ayuda</span>
+        </p>
+        <p>
+          <strong>Facebook:</strong>
+          <span class="dato">facebook.com/balsiam.ayuda</span>
+        </p>
+      </div>
+
+      <!-- Opciones de donación -->
+      <h3>Quiero Donar</h3>
+      <div class="donaciones-opciones">
+        <button class="boton-donar">Yape</button>
+        <button class="boton-donar">Plin</button>
+        <button class="boton-donar">Depósito</button>
+      </div>
+
+      <!-- Extra: PDF informativo y prototipo Figma -->
+      <div class="extra-botones" style="margin-top: 2rem">
+        <a
+          href="https://raw.githubusercontent.com/tuusuario/proyecto/main/public/Balsiam_Informativo.pdf"
+          class="boton-extra"
+          target="_blank"
+        >
+          📄 Ver PDF informativo
+        </a>
+        <a
+          href="https://www.figma.com/design/h6YUPhxQSo5H0P5GP93B5G/Balsiam?node-id=0-1"
+          class="boton-extra"
+          target="_blank"
+        >
+          🎨 Ver prototipo Figma
+        </a>
+      </div>
+
+      <!-- Formulario de contacto simple -->
+      <form
+        class="formulario-contacto"
+        id="formContacto"
+        style="margin-top: 2rem"
+      >
+        <label for="mensaje">Mensaje para nosotros:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <div class="botones-form">
+          <a href="adopciones.html" class="boton-extra">
+            ← Volver a animales en adopción
+          </a>
+          <button type="submit" class="boton-donar">Enviar</button>
+          <a href="index.html" class="boton-extra">Cancelar</a>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer con información legal y redes -->
+    <footer>
+      <p><strong>Logo Balsiam</strong></p>
+      <p>&copy; 2025 Balsiam Ayuda Animal</p>
+      <p>
+        <strong>Legal</strong><br />Política de Privacidad · Términos y
+        Condiciones · Protección de Datos
+      </p>
+      <div class="social-icons">
+        <img src="facebook.png" alt="Facebook" />
+        <img src="instagram.png" alt="Instagram" />
+        <img src="linkedin.png" alt="LinkedIn" />
+      </div>
+    </footer>
+
+    <!-- Puedes enlazar lógica JS si lo deseas -->
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,533 @@
+/* ---------- Variables globales ---------- */
+:root {
+  --bg-color: #0d0d0d;
+  --nav-bg: #0e3b2f;
+  --footer-bg: #00382b;
+  --text-color: #ffffff;
+  --accent-color: #00ffd5;
+  --accent-hover: #00ccb0;
+  --btn-bg: #00ffd5;
+  --btn-hover: #00ccb0;
+  --font-main: "Poppins", sans-serif;
+}
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+}
+
+/* ---------- Vídeo de fondo ---------- */
+video.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.4);
+}
+
+/* ---------- Encabezado sticky ---------- */
+header.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+header.sticky-header img.logo-grande {
+  height: 120px;
+  max-width: 100%;
+}
+header.sticky-header nav {
+  display: flex;
+  gap: 1rem;
+}
+header.sticky-header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+header.sticky-header nav a:hover {
+  color: var(--accent-color);
+}
+
+/* ---------- Sección Hero ---------- */
+.hero {
+  margin-top: 150px; /* espacio para el header fijo */
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .acciones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.hero .acciones a {
+  background-color: var(--btn-bg);
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero .acciones a:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+/* ---------- Video referencial ---------- */
+.video-ref {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.video-ref video {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* ---------- Botones extra ---------- */
+.extra-botones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.boton-extra {
+  background-color: var(--btn-bg);
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.boton-extra:hover {
+  background-color: var(--btn-hover);
+}
+
+/* ---------- Sección info genérica ---------- */
+.info {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  text-align: center;
+  color: #ddd;
+  z-index: 1;
+  position: relative;
+}
+.info h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.info p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Bloques de ayuda ---------- */
+.info-bloques {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.info-bloques div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 280px;
+}
+
+/* ---------- Testimonios estilo neón ---------- */
+.testimonios {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color);
+  font-size: 1.3rem;
+  line-height: 1.8;
+  padding: 2rem;
+}
+.testimonios blockquote {
+  margin: 1.5rem 0;
+  quotes: "“" "”" "‘" "’";
+}
+.testimonios blockquote::before {
+  content: open-quote;
+}
+.testimonios blockquote::after {
+  content: close-quote;
+}
+
+/* ---------- Imagen Misión y Visión ---------- */
+.misionvision-img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px var(--accent-color);
+  margin: 2rem auto;
+  display: block;
+}
+
+/* ---------- Botón donaciones ---------- */
+.boton-donar {
+  display: inline-block;
+  background-color: var(--btn-bg);
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.boton-donar:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+/* ---------- Mapa ---------- */
+.mapa {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--footer-bg);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+footer p {
+  margin-bottom: 0.5rem;
+}
+.social-icons {
+  margin-top: 1rem;
+}
+.social-icons img {
+  height: 35px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+    max-width: 95%;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero .acciones a {
+    width: 80%;
+    margin: 0.5rem auto;
+    display: block;
+  }
+  .info {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+  .info h2 {
+    font-size: 1.8rem;
+  }
+  .info-bloques {
+    flex-direction: column;
+  }
+  .testimonios {
+    font-size: 1.1rem;
+  }
+}
+/* ---------- Estilo para Adopciones ---------- */
+.adopciones h2 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.adopciones p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.adopciones .info-bloques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.adopciones .info-bloques div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 255, 213, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.adopciones .info-bloques div:hover {
+  transform: translateY(-5px);
+}
+
+.adopciones .info-bloques img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 8px rgba(0, 255, 213, 0.15);
+}
+
+.adopciones .info-bloques h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.adopciones .info-bloques p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.adopciones .boton-extra {
+  display: inline-block;
+  margin: 0.3rem 0.3rem;
+  background-color: var(--btn-bg);
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.adopciones .boton-extra:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Responsive para adopciones */
+@media (max-width: 768px) {
+  .adopciones .info-bloques {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* ---------- Formulario de adopción ---------- */
+.formulario-adopcion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+.formulario-adopcion label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.formulario-adopcion input,
+.formulario-adopcion textarea,
+.formulario-adopcion select {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.botones-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.botones-form a,
+.botones-form button {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ---------- Contacto y Donaciones ---------- */
+.contacto-datos {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.contacto-datos .dato {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.donaciones-opciones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.donaciones-opciones .boton-donar {
+  background-color: var(--btn-bg);
+  color: black;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donaciones-opciones .boton-donar:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Formulario mensaje (usa estilos comunes de formularios ya definidos) */
+.formulario-contacto textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+/* ---------- Modal Login ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  color: black;
+}
+
+.modal-contenido input {
+  width: 90%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+/* Estilo del botón hamburguesa */
+.hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Solo mostrar en pantallas pequeñas */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  #menuNav {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #menuNav.open {
+    display: flex;
+  }
+
+  #menuNav a {
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+}
